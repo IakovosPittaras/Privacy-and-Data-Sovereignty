@@ -48,4 +48,18 @@ contract survey {
         
     }
     
+    // tests //
+    function getNumberOfQuestions (string memory name) public returns (uint) {
+        return surveys[name];
+    }
+    
+    function getCounter(string memory name) public returns (uint) {
+        return surveyToCounter[name];
+    }
+    
+    function getResponses(string memory name, uint question) public returns (uint) {
+        return surveyToResponses[name][question];
+    }
+    // tests //
+    
 }
